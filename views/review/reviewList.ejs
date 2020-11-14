@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Review List</title>
+</head>
+<body>
+
+	<center>
+	<h1>Review List</h1>
+
+	
+	</center>
+
+</body>
+</html>
+
+
+	
+
+	<center>
+		<h2>Review List</h2>
+		<table border="1">
+	        <thead>
+	            <tr>
+	            	<th>ID</th>
+	                <th>Name</th>
+	                <th>Commnet</th>
+	            </tr>
+	        </thead>
+	        <tbody>
+	            <% for(var i=0; i< user.length; i++){ %>
+	            <tr>
+	                <td><%= user[i].id %></td>
+	                <td><%= user[i].name %></td>
+	                <td><%= user[i].comment %></td>
+	                <!-- <td><%= user[i].cname %></td>
+	                <td><%= user[i].description %></td>
+	                <td><a href="/user/cart/">Add to cart</a></td>
+	                <td><a href="/review">Review</a></td> -->
+	            </tr>
+	            <% } %>
+	        </tbody>
+    	</table>
+
+    	<br>
+
+    	<a href="/home">Back</a> | 
+    	<a href="/logout">Logout</a>
+    </center>	
+
+</body>
+</html>

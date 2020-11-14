@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portable Storage</title>
+</head>
+
+<body>
+	
+	<a href="/product/ram">Ram</a> <br>
+	<a href="/product/casing">Casing</a> <br>
+	<a href="/product/storage">Storage</a> 
+			=> <a href="/product/parmanent">Parmanent Storage</a> | <a href="/product/portable">Portable Storage</a> <br>
+	<a href="/product/monitor">Monitor</a> <br>
+	<a href="/product/graphics">Graphics</a> <br>
+
+	<center>
+		<h2>Portable Storage</h2>
+		<table border="1">
+	        <thead>
+	            <tr>
+	                <th>Product Name</th>
+	                <th>Price</th>
+	                <th>Brand</th>
+	                <th>Description</th>
+	                <th>Add to cart</th>
+	                <th>Review</th>
+	            </tr>
+	        </thead>
+	        <tbody>
+	            <% for(var i=0; i< user.length; i++){ %>
+	            <tr>
+	                <td><%= user[i].name %></td>
+	                <td><%= user[i].price %></td>
+	                <td><%= user[i].cname %></td>
+	                <td><%= user[i].description %></td>
+	                <td><a href="/user/cart/<%= user[i].id %>">Add to cart</a></td>
+	                <td><a href="/review">Review</a></td>
+	            </tr>
+	            <% } %>
+	        </tbody>
+    	</table>
+
+    	<br>
+
+    	<a href="/logout">Logout</a>
+    </center>	
+
+</body>
+</html>
